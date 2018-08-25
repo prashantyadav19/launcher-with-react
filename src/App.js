@@ -1,29 +1,15 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import logo from './logo.svg';
-import './App.css';
-import { simpleAction } from './actions/simpleAction'
+import {BrowserRouter, Route } from 'react-router-dom';
+import {Home} from './containers';
 class App extends Component {
-    simpleAction = (event) => {
-        this.props.abc();
-    }
     render() {
         return (
-            <div className="App">
-                <button onClick={this.simpleAction}>Test redux action</button>
-                <pre>
- {
-     JSON.stringify(this.props)
- }
-</pre>
-            </div>
-        );
+            <BrowserRouter>
+                <div>
+                    <Route exact path="/" component={Home} />
+                </div>
+            </BrowserRouter>
+        )
     }
 }
-const mapDispatchToProps = dispatch => ({
-    abc: () => dispatch(simpleAction())
-})
-const mapStateToProps = state => ({
-    ...state
-})
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App
