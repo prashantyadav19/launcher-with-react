@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "facebook",
+    "description" : "This app is for social networking",
+    "category": "Social Media",
+    "icon" : "/installed-apps/facebook.svg"
+  },
+  {
+    "id": "2",
+    "name": "instagram",
+    "description" : "This app is for social networking",
+    "category": "Social Media",
+    "icon" : "/installed-apps/instagram.svg"
+  },
+  {
+    "id": "3",
+    "name": "twitter",
+    "description" : "This app is for social networking",
+    "category": "Social Media",
+    "icon" : "/installed-apps/twitter.svg"
+  },
+  {
+    "id": "4",
+    "name": "Google +",
+    "description" : "This app is for social networking",
+    "category": "Social Media",
+    "icon" : "/installed-apps/google-plus.svg"
+  },
+  {
+    "id": "5",
+    "name": "Books",
+    "description" : "This app is for educational purpose",
+    "category": "Education",
+    "icon" : "/installed-apps/books.svg"
+  },
+  {
+    "id": "6",
+    "name": "University",
+    "description" : "This app is for educational purpose",
+    "category": "Education",
+    "icon" : "/installed-apps/university.svg"
+  },
+  {
+    "id": "7",
+    "name": "Violin",
+    "description" : "This is a music app",
+    "category": "Media",
+    "icon" : "/installed-apps/violin.svg"
+  },
+  {
+    "id": "8",
+    "name": "Video",
+    "description" : "This is a video app",
+    "category": "Media",
+    "icon" : "/installed-apps/video-play.svg"
+  },
+  {
+    "id": "9",
+    "name": "DocApp",
+    "description" : "This app is for Medical purpose",
+    "category": "Medical Elements",
+    "icon" : "/installed-apps/stethoscope.svg"
+  },
+  {
+    "id": "10",
+    "name": "HospitalApp",
+    "description" : "This app is for Medical purpose",
+    "category": "Medical",
+    "icon" : "/installed-apps/cardiogram.svg"
+  }
+]

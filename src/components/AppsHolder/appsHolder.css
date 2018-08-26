@@ -1,0 +1,9 @@
+.app-icon img {
+    height: 70px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.apps-holder-page{
+    display: inline-flex;
+}

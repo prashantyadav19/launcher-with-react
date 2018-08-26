@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {CHome, CHeader, CSearch, CSearchInput} from '../../components';
+import AppsHolder from '../AppsHolder/AppsHolder';
 export default class Home extends Component {
 
     render() {
@@ -9,6 +10,7 @@ export default class Home extends Component {
                 <CSearch>
                 <CSearchInput/>
                 </CSearch>
+                <AppsHolder />
             </CHome>
 
 
