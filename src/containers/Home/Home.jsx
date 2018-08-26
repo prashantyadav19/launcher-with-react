@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {CHome, CHeader, CSearch,
     CSearchInput, CFrequentlyUsedApps,
     CFAppItems, CAppItem,
-    CFooter, CFooterItem, CFooterItems} from '../../components';
+    CFooter, CFooterItem, CFooterItems, CGridView, CGridViewItem} from '../../components';
 import { SwatchesPicker  } from 'react-color';
 import {AppsHolder} from '../index';
 
@@ -41,8 +41,11 @@ export default class Home extends Component {
                     "icon" : "/installed-apps/google-plus.svg"
                 }],
             footerIcons: ['Frequently Used', 'Category View', 'Grid Layouts', 'Color Picker'],
+            gridViewList: ['4 x 4 Mode', '4 x 5 Mode'],
             background: '#7eb0d6',
-            colorPicker: false
+            colorPicker: false,
+            categoryView: false,
+            gridView: false
         }
     }
 
@@ -51,9 +54,16 @@ export default class Home extends Component {
         this.setState({colorPicker: false})
     };
 
+    handleGridView = (e, item) => {
+        console.log('new one--', item);
+    }
     footerItemClick(e, value) {
         if(value === 'Color Picker'){
             this.setState({colorPicker: true})
+        }else if(value === 'Category View'){
+            this.setState({categoryView: !this.state.categoryView})
+        }else if(value === 'Grid Layouts'){
+            this.setState({gridView: !this.state.gridView})
         }
     }
 
@@ -68,6 +78,15 @@ export default class Home extends Component {
                     />
                     : ''
                 }
+                <CGridView mode={this.state.gridView}>
+                {this.state.gridView ?
+                    this.state.gridViewList.map(function(item, i){
+                        return <CGridViewItem name={item} handleClick={(e) => self.handleGridView(e, item)} key={i}  />
+                    })
+                    : ''
+
+                }
+            </CGridView>
                 <CHeader/>
                 <CSearch>
                 <CSearchInput/>
@@ -79,7 +98,7 @@ export default class Home extends Component {
                     })}
                     </CFAppItems>
                 </CFrequentlyUsedApps>
-                <AppsHolder />
+                <AppsHolder categoryView={this.state.categoryView} />
                 <CFooter>
                     <CFooterItems>
                         {this.state.footerIcons.map(function(item, i){
