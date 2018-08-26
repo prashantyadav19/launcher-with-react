@@ -11,7 +11,7 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            messageDetails: [
+            freqUsedApps: [
                 {
                     "id": "1",
                     "name": "Facebook",
@@ -39,15 +39,8 @@ export default class Home extends Component {
                     "description" : "This app is for social networking",
                     "category": "Social Media",
                     "icon" : "/installed-apps/google-plus.svg"
-                },
-                {
-                    "id": "5",
-                    "name": "Books",
-                    "description" : "This app is for educational purpose",
-                    "category": "Education",
-                    "icon" : "/installed-apps/books.svg"
                 }],
-            footerIcon: ['FA', 'CV', 'GL', 'cc'],
+            footerIcons: ['Frequently Used', 'Category View', 'Grid Layouts', 'Color Picker'],
             background: '#7eb0d6',
             colorPicker: false
         }
@@ -59,7 +52,7 @@ export default class Home extends Component {
     };
 
     footerItemClick(e, value) {
-        if(value === 'cc'){
+        if(value === 'Color Picker'){
             this.setState({colorPicker: true})
         }
     }
@@ -81,7 +74,7 @@ export default class Home extends Component {
                 </CSearch>
                 <CFrequentlyUsedApps>
                     <CFAppItems>
-                    {this.state.messageDetails.map(function(item, i){
+                    {this.state.freqUsedApps.map(function(item, i){
                         return <CAppItem {...item} key={i}  />
                     })}
                     </CFAppItems>
@@ -89,7 +82,7 @@ export default class Home extends Component {
                 <AppsHolder />
                 <CFooter>
                     <CFooterItems>
-                        {this.state.footerIcon.map(function(item, i){
+                        {this.state.footerIcons.map(function(item, i){
                             return <CFooterItem name={item} handleClick={(e) => self.footerItemClick(e, item)} key={i}  />
                         })}
                     </CFooterItems>
