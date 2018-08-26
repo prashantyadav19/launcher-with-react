@@ -4,3 +4,5 @@ export { CSearch, CSearchInput } from './Search/Search';
 export { CAppHolder, CApp } from './AppsHolder/AppsHolder';
 export { CAppDetail } from './AppDetail/AppDetail';
 
+export {CFrequentlyUsedApps, CFAppItems, CAppItem} from './FrequentlyUsedApps/FrequentlyUsedApps';
+export { CFooter, CFooterItems ,CFooterItem } from './Footer/Footer';
