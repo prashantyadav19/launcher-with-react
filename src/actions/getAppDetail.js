@@ -1,4 +1,10 @@
+/**
+ * getAppDetail action use axios for fetching app details
+ *
+ */
+
 const axios = require('axios');
+
 export const getAppDetail = (id) => dispatch => {
     axios.get('../installed-apps/apps.json')
         .then((response) => {
