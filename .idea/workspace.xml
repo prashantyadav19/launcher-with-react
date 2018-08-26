@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c8863d1-9c31-47be-b53b-3bf9a17ff8f3" name="Default" comment="">
+    <list default="true" id="4c8863d1-9c31-47be-b53b-3bf9a17ff8f3" name="Default" comment="Make category view&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/AppsHolder/AppsHolder.jsx" afterPath="$PROJECT_DIR$/src/components/AppsHolder/AppsHolder.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/index.js" afterPath="$PROJECT_DIR$/src/components/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/AppsHolder/AppsHolder.jsx" afterPath="$PROJECT_DIR$/src/containers/AppsHolder/AppsHolder.jsx" />
     </list>
     <list id="445aa2f1-5574-4e4d-b91c-063545ce0184" name="Failed commit: Default" comment="Added detail page&#10;" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +24,8 @@
       <file leaf-file-name="AppsHolder.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/AppsHolder/AppsHolder.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="-17">
+              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -39,8 +36,8 @@
       <file leaf-file-name="AppsHolder.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/AppsHolder/AppsHolder.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -52,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+              <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -372,7 +369,7 @@
       <workItem from="1535273594040" duration="2173000" />
       <workItem from="1535276137490" duration="5494000" />
       <workItem from="1535286447385" duration="192000" />
-      <workItem from="1535286976378" duration="4106000" />
+      <workItem from="1535286976378" duration="4795000" />
     </task>
     <task id="LOCAL-00001" summary="Update readme">
       <created>1535273752245</created>
@@ -395,11 +392,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535291365828</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Make category view&#10;">
+      <created>1535294989850</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535294989850</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11965000" />
+    <option name="totallyTimeSpent" value="12654000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -435,7 +439,8 @@
     <MESSAGE value="Update readme" />
     <MESSAGE value="Added detail page&#10;" />
     <MESSAGE value="added idea&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added idea&#10;" />
+    <MESSAGE value="Make category view&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make category view&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -745,15 +750,15 @@
     <entry file="file://$PROJECT_DIR$/src/components/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AppsHolder/AppsHolder.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="340">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -762,8 +767,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/AppsHolder/AppsHolder.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="-17">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
