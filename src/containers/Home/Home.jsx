@@ -11,7 +11,42 @@ export default class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            messageDetails: ['fb', 'uber', 'voot'],
+            messageDetails: [
+                {
+                    "id": "1",
+                    "name": "Facebook",
+                    "description" : "This app is for social networking",
+                    "category": "Social Media",
+                    "icon" : "/installed-apps/facebook.svg"
+                },
+                {
+                    "id": "2",
+                    "name": "Instagram",
+                    "description" : "This app is for social networking",
+                    "category": "Social Media",
+                    "icon" : "/installed-apps/instagram.svg"
+                },
+                {
+                    "id": "3",
+                    "name": "Twitter",
+                    "description" : "This app is for social networking",
+                    "category": "Social Media",
+                    "icon" : "/installed-apps/twitter.svg"
+                },
+                {
+                    "id": "4",
+                    "name": "Google +",
+                    "description" : "This app is for social networking",
+                    "category": "Social Media",
+                    "icon" : "/installed-apps/google-plus.svg"
+                },
+                {
+                    "id": "5",
+                    "name": "Books",
+                    "description" : "This app is for educational purpose",
+                    "category": "Education",
+                    "icon" : "/installed-apps/books.svg"
+                }],
             footerIcon: ['FA', 'CV', 'GL', 'cc'],
             background: '#fff',
             colorPicker: false
@@ -47,7 +82,7 @@ export default class Home extends Component {
                 <CFrequentlyUsedApps>
                     <CFAppItems>
                     {this.state.messageDetails.map(function(item, i){
-                        return <CAppItem name={item} key={i}  />
+                        return <CAppItem {...item} key={i}  />
                     })}
                     </CFAppItems>
                 </CFrequentlyUsedApps>
