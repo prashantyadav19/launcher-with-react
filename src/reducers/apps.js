@@ -4,6 +4,10 @@ export default (state = {}, action) => {
             return {
                 result: action.payload
             };
+        case 'GET_APP_DETAIL_ACTION':
+            return {
+                result: action.payload
+            };
         default:
             return state
     }

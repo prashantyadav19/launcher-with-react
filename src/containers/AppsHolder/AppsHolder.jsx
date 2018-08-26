@@ -12,13 +12,12 @@ import { getApps } from '../../actions/getApps'
         this.props.getApps();
     }
 
-    render() {
-        console.log('apps', this.props);
+     render() {
         return (
             <CAppHolder>
                 {
                     this.props.apps && this.props.apps.result && this.props.apps.result.length ? this.props.apps.result.map((item, index) => {
-                        return <CApp {...item} />;
+                        return <CApp {...item} key={index} />;
                     }) : ''
                 }
             </CAppHolder>

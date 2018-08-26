@@ -1,21 +1,21 @@
 [
   {
     "id": "1",
-    "name": "facebook",
+    "name": "Facebook",
     "description" : "This app is for social networking",
     "category": "Social Media",
     "icon" : "/installed-apps/facebook.svg"
   },
   {
     "id": "2",
-    "name": "instagram",
+    "name": "Instagram",
     "description" : "This app is for social networking",
     "category": "Social Media",
     "icon" : "/installed-apps/instagram.svg"
   },
   {
     "id": "3",
-    "name": "twitter",
+    "name": "Twitter",
     "description" : "This app is for social networking",
     "category": "Social Media",
     "icon" : "/installed-apps/twitter.svg"
