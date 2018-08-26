@@ -1,3 +1,9 @@
 .header {
     text-align: center;
 }
+.header p{
+    width: 100%;
+    float: left;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}

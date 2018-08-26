@@ -7,7 +7,7 @@ import { getApps } from '../../actions/getApps'
 
     constructor(props) {
         super(props);
-        this.state = {categoryView: true};
+        this.state = {categoryView: false};
     }
     componentWillMount() {
         this.props.getApps();

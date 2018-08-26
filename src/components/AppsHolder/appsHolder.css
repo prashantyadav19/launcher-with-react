@@ -1,9 +1,51 @@
-.app-icon img {
-    height: 70px;
-    border-radius: 50%;
-    padding: 10px;
-}
-
 .apps-holder-page{
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: calc(100vh - 217px);
+    overflow-y: auto;
+    float: left;
+    width: 100%;
 }
+.apps-holder-page a{
+    text-align: center;
+    font-size: 11px;
+    min-height: 80px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+.apps-holder-page.five a {
+    width: 20%;
+}
+.apps-holder-page.four a{
+    width: 25%;
+}
+.apps-holder-page a img {
+    height: 35px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.apps-holder-page a span{
+    width: 100%;
+    float: left;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+.category-view {
+    width: 100%;
+    float: left;
+}
+.category-view h3{
+    font-size: 13px;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+.category-item-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.category-item-list a{ min-width: 25%;}

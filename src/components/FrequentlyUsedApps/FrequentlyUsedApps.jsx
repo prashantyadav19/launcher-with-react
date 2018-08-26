@@ -9,19 +9,17 @@ export const CFrequentlyUsedApps = ({ children }) => (
 );
 
 export const CFAppItems = ({ children }) => (
-    <ul className="app-items">
-        <span>Frequently Used Apps</span>
-        {children}
-    </ul>
+    <div className="frequently-list">
+        <h3>Frequently Used Apps</h3>
+        <div className="app-items">{children}</div>
+    </div>
 );
 
 export const CAppItem = ({  name, icon, id }) => (
-    <div className="app-items">
+    <div className="app-items-list">
         <Link to={"/app/" + id} >
             <div className="app-icon">
                 <img src={icon} />
-                <br />
-                <span>{name}</span>
             </div>
         </Link>
     </div>
