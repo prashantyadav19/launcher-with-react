@@ -7,11 +7,22 @@ import { getApps } from '../../actions/getApps'
 
     constructor(props) {
         super(props);
+        this.state = {apps: []};
     }
     componentWillMount() {
         this.props.getApps();
     }
-
+     componentWillReceiveProps(nextProps) {
+         if (this.props.searchValue === nextProps.searchValue && this.props.apps && this.props.apps.result && this.props.apps.result.length) {
+             this.setState({apps: this.props.apps.result});
+         }
+         else if (this.props.searchValue !== nextProps.searchValue && nextProps.searchValue !== '' && this.props.apps && this.props.apps.result && this.props.apps.result.length) {
+             let result = this.props.apps.result.filter(item => item.name.toLowerCase().indexOf(nextProps.searchValue.toLowerCase()) !== -1);
+             this.setState({apps: result});
+         } else if(nextProps.searchValue === '' && this.props.apps && this.props.apps.result && this.props.apps.result.length) {
+             this.setState({apps: this.props.apps.result});
+         }
+     }
 
 
     categorizedApps(items) {
@@ -42,7 +53,7 @@ import { getApps } from '../../actions/getApps'
 
      render() {
         if (this.props && this.props.categoryView) {
-            let items = this.categorizedApps(this.props.apps && this.props.apps.result && this.props.apps.result.length ? this.props.apps.result: []);
+            let items = this.categorizedApps(this.state.apps);
             return (
                 <CAppHolder>
                     {
@@ -55,9 +66,9 @@ import { getApps } from '../../actions/getApps'
         return (
             <CAppHolder>
                 {
-                    this.props.apps && this.props.apps.result && this.props.apps.result.length ? this.props.apps.result.map((item, index) => {
+                    this.state.apps.map((item, index) => {
                         return <CApp {...item} key={index} />;
-                    }) : ''
+                    })
                 }
             </CAppHolder>
         )

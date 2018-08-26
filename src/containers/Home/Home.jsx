@@ -5,8 +5,10 @@ import {CHome, CHeader, CSearch,
     CFooter, CFooterItem, CFooterItems, CGridView, CGridViewItem} from '../../components';
 import { SwatchesPicker  } from 'react-color';
 import {AppsHolder} from '../index';
+import { connect } from 'react-redux';
+import { getApps } from '../../actions/getApps'
 
-export default class Home extends Component {
+class Home extends Component {
 
     constructor(props) {
         super(props);
@@ -45,8 +47,13 @@ export default class Home extends Component {
             background: '#7eb0d6',
             colorPicker: false,
             categoryView: false,
-            gridView: false
+            gridView: false,
+            searchValue: ''
         }
+    }
+
+    componentWillMount() {
+        this.props.getApps();
     }
 
     handleChangeComplete = (color) => {
@@ -65,6 +72,10 @@ export default class Home extends Component {
         }else if(value === 'Grid Layouts'){
             this.setState({gridView: !this.state.gridView})
         }
+    }
+
+    onTextChange(e) {
+        this.setState({searchValue: e.target.value})
     }
 
     render() {
@@ -89,7 +100,7 @@ export default class Home extends Component {
             </CGridView>
                 <CHeader/>
                 <CSearch>
-                <CSearchInput/>
+                <CSearchInput handleChange={(e) => this.onTextChange(e)}/>
                 </CSearch>
                 <CFrequentlyUsedApps>
                     <CFAppItems>
@@ -98,7 +109,7 @@ export default class Home extends Component {
                     })}
                     </CFAppItems>
                 </CFrequentlyUsedApps>
-                <AppsHolder categoryView={this.state.categoryView} />
+                <AppsHolder categoryView={this.state.categoryView} searchValue={this.state.searchValue}/>
                 <CFooter>
                     <CFooterItems>
                         {this.state.footerIcons.map(function(item, i){
@@ -112,3 +123,11 @@ export default class Home extends Component {
         )
 }
 }
+
+const mapDispatchToProps = dispatch => ({
+    getApps: () => dispatch(getApps())
+})
+const mapStateToProps = state => ({
+    ...state
+})
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
