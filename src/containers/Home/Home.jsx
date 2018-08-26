@@ -19,35 +19,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            freqUsedApps: [
-                {
-                    "id": "1",
-                    "name": "Facebook",
-                    "description" : "This app is for social networking",
-                    "category": "Social Media",
-                    "icon" : "/installed-apps/facebook.svg"
-                },
-                {
-                    "id": "2",
-                    "name": "Instagram",
-                    "description" : "This app is for social networking",
-                    "category": "Social Media",
-                    "icon" : "/installed-apps/instagram.svg"
-                },
-                {
-                    "id": "3",
-                    "name": "Twitter",
-                    "description" : "This app is for social networking",
-                    "category": "Social Media",
-                    "icon" : "/installed-apps/twitter.svg"
-                },
-                {
-                    "id": "4",
-                    "name": "Google +",
-                    "description" : "This app is for social networking",
-                    "category": "Social Media",
-                    "icon" : "/installed-apps/google-plus.svg"
-                }],
+            freqUsedApps: this.getFreqUsedApps().slice(0, 4),
             footerIcons: ['Frequently Used', 'Category View', 'Grid Layouts', 'Color Picker'],
             gridViewList: ['4 x 4 Mode', '4 x 5 Mode'],
             background: '#7eb0d6',
@@ -66,6 +38,15 @@ class Home extends Component {
         this.props.getApps();
     }
 
+    getFreqUsedApps() {
+        let freqUsedApps = localStorage.getItem('freqUsedApps');
+        let apps = [];
+        if (freqUsedApps !== '' && freqUsedApps !== null) {
+            apps = JSON.parse(freqUsedApps);
+        }
+        return apps;
+    }
+
     /**
      * handleChangeComplete is use for color picker
      * @param color
@@ -81,10 +62,11 @@ class Home extends Component {
      * @param item
      */
     handleGridView = (e, item) => {
+        let freqUsedApps = this.getFreqUsedApps();
         if(item === '4 x 4 Mode'){
-            this.setState({gridType: 'four'})
+            this.setState({gridType: 'four', freqUsedApps: freqUsedApps.slice(0, 4)})
         }else {
-            this.setState({gridType: 'five'})
+            this.setState({gridType: 'five', freqUsedApps: freqUsedApps.slice(0, 5)})
         }
         this.setState({gridView: false})
     };
