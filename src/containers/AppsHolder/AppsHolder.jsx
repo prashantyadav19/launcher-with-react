@@ -55,7 +55,7 @@ import { getApps } from '../../actions/getApps'
         if (this.props && this.props.categoryView) {
             let items = this.categorizedApps(this.state.apps);
             return (
-                <CAppHolder>
+                <CAppHolder gridType = {this.props.gridType}>
                     {
                        this.renderCategoryView(items)
 
@@ -64,7 +64,7 @@ import { getApps } from '../../actions/getApps'
             )
         }
         return (
-            <CAppHolder>
+            <CAppHolder gridType = {this.props.gridType}>
                 {
                     this.state.apps.map((item, index) => {
                         return <CApp {...item} key={index} />;

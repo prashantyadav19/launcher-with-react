@@ -8,12 +8,15 @@ export const CFrequentlyUsedApps = ({ children }) => (
     </div>
 );
 
-export const CFAppItems = ({ children }) => (
-    <div className="frequently-list">
-        <h3>Frequently Used Apps</h3>
-        <div className="app-items">{children}</div>
-    </div>
-);
+export const CFAppItems = ({ children, gridType }) => {
+    const itemClass = gridType === 'five' ? 'app-items five-mode' : 'app-items';
+    return (
+        <div className="frequently-list">
+            <h3>Frequently Used Apps</h3>
+            <div className={itemClass}>{children}</div>
+        </div>
+    );
+}
 
 export const CAppItem = ({  name, icon, id }) => (
     <div className="app-items-list">

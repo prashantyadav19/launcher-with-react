@@ -48,4 +48,5 @@
     display: flex;
     flex-wrap: wrap;
 }
-.category-item-list a{ min-width: 25%;}
+.category-item-list.four a{ min-width: 25%;}
+.category-item-list.five a{ min-width: 25%;}

@@ -2,11 +2,15 @@ import React from 'react';
 import './appsHolder.css';
 import { Link } from 'react-router-dom';
 
-export const CAppHolder = ({ children }) => (
-    <div className="apps-holder-page four">
-        {children}
-    </div>
-);
+export const CAppHolder = ({ children, gridType }) => {
+
+    const view = gridType === 'five' ? 'apps-holder-page five' : 'apps-holder-page four';
+    return (
+        <div className={view}>
+            {children}
+        </div>
+    );
+};
 
 export const CApp = ({ name, icon, id }) => (
     <Link to={"/app/" + id} >

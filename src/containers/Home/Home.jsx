@@ -48,7 +48,8 @@ class Home extends Component {
             colorPicker: false,
             categoryView: false,
             gridView: false,
-            searchValue: ''
+            searchValue: '',
+            gridType: 'four'
         }
     }
 
@@ -63,7 +64,14 @@ class Home extends Component {
 
     handleGridView = (e, item) => {
         console.log('new one--', item);
+        if(item === '4 x 4 Mode'){
+            this.setState({gridType: 'four'})
+        }else {
+            this.setState({gridType: 'five'})
+        }
+        this.setState({gridView: false})
     }
+
     footerItemClick(e, value) {
         if(value === 'Color Picker'){
             this.setState({colorPicker: true})
@@ -103,13 +111,13 @@ class Home extends Component {
                 <CSearchInput handleChange={(e) => this.onTextChange(e)}/>
                 </CSearch>
                 <CFrequentlyUsedApps>
-                    <CFAppItems>
+                    <CFAppItems gridType={this.state.gridType}>
                     {this.state.freqUsedApps.map(function(item, i){
                         return <CAppItem {...item} key={i}  />
                     })}
                     </CFAppItems>
                 </CFrequentlyUsedApps>
-                <AppsHolder categoryView={this.state.categoryView} searchValue={this.state.searchValue}/>
+                <AppsHolder categoryView={this.state.categoryView} searchValue={this.state.searchValue} gridType= {this.state.gridType} />
                 <CFooter>
                     <CFooterItems>
                         {this.state.footerIcons.map(function(item, i){
