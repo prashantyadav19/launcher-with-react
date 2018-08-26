@@ -27,7 +27,8 @@ class Home extends Component {
             categoryView: false,
             gridView: false,
             searchValue: '',
-            gridType: 'four'
+            gridType: 'four',
+            freqUsedView: false
         }
     }
 
@@ -83,6 +84,8 @@ class Home extends Component {
             this.setState({categoryView: !this.state.categoryView})
         }else if(value === 'Grid Layouts'){
             this.setState({gridView: !this.state.gridView})
+        } else if(value === 'Frequently Used'){
+            this.setState({freqUsedView: !this.state.freqUsedView, freqUsedApps: this.getFreqUsedApps()})
         }
     }
 
@@ -125,7 +128,7 @@ class Home extends Component {
                     })}
                     </CFAppItems>
                 </CFrequentlyUsedApps>
-                <AppsHolder categoryView={this.state.categoryView} searchValue={this.state.searchValue} gridType= {this.state.gridType} />
+                { !this.state.freqUsedView ? <AppsHolder categoryView={this.state.categoryView} searchValue={this.state.searchValue} gridType= {this.state.gridType} /> : ''}
                 <CFooter>
                     <CFooterItems>
                         {this.state.footerIcons.map(function(item, i){

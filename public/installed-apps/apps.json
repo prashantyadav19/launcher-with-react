@@ -2,42 +2,42 @@
   {
     "id": "1",
     "name": "Facebook",
-    "description" : "This app is for social networking",
+    "description" : "This is a social networking app",
     "category": "Social Media",
     "icon" : "/installed-apps/facebook.svg"
   },
   {
     "id": "2",
     "name": "Instagram",
-    "description" : "This app is for social networking",
+    "description" : "This is a social networking app",
     "category": "Social Media",
     "icon" : "/installed-apps/instagram.svg"
   },
   {
     "id": "3",
     "name": "Twitter",
-    "description" : "This app is for social networking",
+    "description" : "This is a social networking app",
     "category": "Social Media",
     "icon" : "/installed-apps/twitter.svg"
   },
   {
     "id": "4",
     "name": "Google +",
-    "description" : "This app is for social networking",
+    "description" : "This is a social networking app",
     "category": "Social Media",
     "icon" : "/installed-apps/google-plus.svg"
   },
   {
     "id": "5",
     "name": "Books",
-    "description" : "This app is for educational purpose",
+    "description" : "This is a educational app",
     "category": "Education",
     "icon" : "/installed-apps/books.svg"
   },
   {
     "id": "6",
     "name": "University",
-    "description" : "This app is for educational purpose",
+    "description" : "This is a educational app",
     "category": "Education",
     "icon" : "/installed-apps/university.svg"
   },
@@ -58,15 +58,57 @@
   {
     "id": "9",
     "name": "DocApp",
-    "description" : "This app is for Medical purpose",
+    "description" : "This is a Medical app",
     "category": "Medical Elements",
     "icon" : "/installed-apps/stethoscope.svg"
   },
   {
     "id": "10",
     "name": "HospitalApp",
-    "description" : "This app is for Medical purpose",
+    "description" : "This is a Medical app",
     "category": "Medical Elements",
     "icon" : "/installed-apps/cardiogram.svg"
+  },
+  {
+    "id": "11",
+    "name": "WhatsApp",
+    "description" : "This is a social networking app",
+    "category": "Social Media",
+    "icon" : "/installed-apps/whatsapp.svg"
+  },
+  {
+    "id": "12",
+    "name": "Youtube",
+    "description" : "This is a social networking app",
+    "category": "Social Media",
+    "icon" : "/installed-apps/youtube.svg"
+  },
+  {
+    "id": "13",
+    "name": "Shopping",
+    "description" : "This app provides shopping facilities",
+    "category": "E-Commerce",
+    "icon" : "/installed-apps/shopping-bag.svg"
+  },
+  {
+    "id": "14",
+    "name": "Phone",
+    "description" : "This is a communication purpose app",
+    "category": "Communication",
+    "icon" : "/installed-apps/mobile-phone.svg"
+  },
+  {
+    "id": "15",
+    "name": "Youtube",
+    "description" : "This is a communication purpose app",
+    "category": "Communication",
+    "icon" : "/installed-apps/chatting.svg"
+  },
+  {
+    "id": "16",
+    "name": "Shopping",
+    "description" : "This is a communication purpose app",
+    "category": "Communication",
+    "icon" : "/installed-apps/wifi-signal.svg"
   }
 ]
