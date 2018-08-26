@@ -14,7 +14,15 @@ export const CFooterItems = ({ children }) => (
 
 export const CFooterItem = ({ name, handleClick }) => (
     <li className="footer-item" onClick={handleClick}>
-        {name}
+        <i class="fas fa-align-justify"></i>
+        <span>Frequently Used</span>
+        {name == 'GL' ?<div className="list-change-mode block-list">
+            <ul>
+                <li>3-4 Mode</li>
+                <li>4-4 Mode</li>
+                <li>4-5 Mode</li>
+            </ul>
+        </div> : ''}
     </li>
 );
 

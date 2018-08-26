@@ -48,7 +48,7 @@ export default class Home extends Component {
                     "icon" : "/installed-apps/books.svg"
                 }],
             footerIcon: ['FA', 'CV', 'GL', 'cc'],
-            background: '#fff',
+            background: '#7eb0d6',
             colorPicker: false
         }
     }
