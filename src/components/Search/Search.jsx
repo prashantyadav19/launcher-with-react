@@ -6,8 +6,8 @@ export const CSearch = ({ children }) => (
     </div>
 );
 
-export const CSearchInput = ({ }) => (
+export const CSearchInput = ({ handleChange }) => (
     <div className="search-input">
-        <input type="text" placeholder="search" />
+        <input type="text" placeholder="search" onChange={handleChange}/>
     </div>
 );
