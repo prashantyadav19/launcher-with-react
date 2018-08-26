@@ -18,3 +18,10 @@ export const CApp = ({ name, icon, id }) => (
     </Link>
 );
 
+export const CCategoryView = ({ children, category }) => (
+    <div className="category-view">
+        <div> {category} </div>
+        <div>{children} </div>
+    </div>
+);
+
