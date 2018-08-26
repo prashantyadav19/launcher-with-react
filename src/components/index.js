@@ -1,4 +1,4 @@
-export { CHome } from './Home/Home';
+export { CHome, CGridView, CGridViewItem } from './Home/Home';
 export { CHeader } from './Header/Header';
 export { CSearch, CSearchInput } from './Search/Search';
 export { CAppHolder, CApp, CCategoryView } from './AppsHolder/AppsHolder';

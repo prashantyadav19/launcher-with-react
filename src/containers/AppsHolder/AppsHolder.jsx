@@ -7,11 +7,12 @@ import { getApps } from '../../actions/getApps'
 
     constructor(props) {
         super(props);
-        this.state = {categoryView: false};
     }
     componentWillMount() {
         this.props.getApps();
     }
+
+
 
     categorizedApps(items) {
         return items.reduce(function (r, a) {
@@ -20,6 +21,7 @@ import { getApps } from '../../actions/getApps'
             return r;
         }, Object.create(null));
     }
+
 
     renderApps(items) {
         return items.map((item, index) => {
@@ -39,7 +41,7 @@ import { getApps } from '../../actions/getApps'
     }
 
      render() {
-        if (this.state.categoryView) {
+        if (this.props && this.props.categoryView) {
             let items = this.categorizedApps(this.props.apps && this.props.apps.result && this.props.apps.result.length ? this.props.apps.result: []);
             return (
                 <CAppHolder>

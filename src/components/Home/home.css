@@ -6,3 +6,15 @@
     height: 100vh;
     background: #7eb0d6;
 }
+.list-change-mode {
+    position: absolute;
+    bottom: 45px;
+    background: #fff;
+    text-align: left;
+    display: none;
+    float: left;
+    width: calc(100% - 20px);
+}
+.list-change-mode.block-list { display: block}
+.list-change-mode ul{ list-style: none;}
+.list-change-mode ul li{ padding: 8px 0; font-size: 13px; line-height: 15px; cursor: pointer;  width: calc(100% - 20px); float: left; text-align: left}
