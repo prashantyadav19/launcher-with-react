@@ -45,7 +45,7 @@ import { getApps } from '../../actions/getApps'
         for (let key in items) {
             if (key) {
                 console.log(key, items[key]);
-                renderItems.push(<CCategoryView category={key}>{this.renderApps(items[key])}</CCategoryView>);
+                renderItems.push(<CCategoryView category={key} key={key}>{this.renderApps(items[key])}</CCategoryView>);
             }
         }
         return renderItems;
