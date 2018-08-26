@@ -99,14 +99,14 @@
   },
   {
     "id": "15",
-    "name": "Youtube",
+    "name": "Chat",
     "description" : "This is a communication purpose app",
     "category": "Communication",
     "icon" : "/installed-apps/chatting.svg"
   },
   {
     "id": "16",
-    "name": "Shopping",
+    "name": "WI FI",
     "description" : "This is a communication purpose app",
     "category": "Communication",
     "icon" : "/installed-apps/wifi-signal.svg"
