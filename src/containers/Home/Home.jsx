@@ -1,3 +1,9 @@
+/**
+ * Home container component is a main component of app
+ * this component use for contain all component for this app
+ *
+ */
+
 import React, { Component } from 'react';
 import {CHome, CHeader, CSearch,
     CSearchInput, CFrequentlyUsedApps,
@@ -53,25 +59,41 @@ class Home extends Component {
         }
     }
 
+    /**
+     * this method is use for calling getApp method
+     */
     componentWillMount() {
         this.props.getApps();
     }
 
+    /**
+     * handleChangeComplete is use for color picker
+     * @param color
+     */
     handleChangeComplete = (color) => {
         this.setState({ background: color.hex });
         this.setState({colorPicker: false})
     };
 
+    /**
+     * this method use for handle grid view
+     * @param e
+     * @param item
+     */
     handleGridView = (e, item) => {
-        console.log('new one--', item);
         if(item === '4 x 4 Mode'){
             this.setState({gridType: 'four'})
         }else {
             this.setState({gridType: 'five'})
         }
         this.setState({gridView: false})
-    }
+    };
 
+    /**
+     * this method is use for manage footer items action
+     * @param e
+     * @param value
+     */
     footerItemClick(e, value) {
         if(value === 'Color Picker'){
             this.setState({colorPicker: true})
@@ -82,6 +104,10 @@ class Home extends Component {
         }
     }
 
+    /**
+     * this method is use for handle text value of search box
+     * @param e
+     */
     onTextChange(e) {
         this.setState({searchValue: e.target.value})
     }
@@ -132,9 +158,17 @@ class Home extends Component {
 }
 }
 
+/**
+ * this method is use for map dispatch to props
+ * @param dispatch
+ */
 const mapDispatchToProps = dispatch => ({
     getApps: () => dispatch(getApps())
 })
+/**
+ * this method is use for map state value to props
+ * @param state
+ */
 const mapStateToProps = state => ({
     ...state
 })
