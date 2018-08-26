@@ -1,0 +1,11 @@
+.app-items{
+    list-style: none;
+}
+.app-items li {
+    display: inline-block;
+    border-radius: 50px;
+    -webkit-box-shadow: 0 0 2px #888;
+    box-shadow: 0 0 2px #888;
+    padding: 0.6em 0.6em;
+    margin: 5px;
+}
